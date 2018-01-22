@@ -1,0 +1,44 @@
+*{
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+}
+ul{list-style-type: none;}
+header{ text-align: center;}
+ul.main{ 
+  position: relative;
+  width: 640px; margin: 0 auto;
+  height: 30px;
+  line-height: 30px;
+/*   background: #eee; */
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+ul.main > li{
+  position: relative;
+  float: left;
+  width: 150px;
+}
+.sub{
+  position: absolute;
+  width: 150px;
+}
+
+/*  hover dropdown */
+.main > li .sub{ 
+  height:0;
+  transition: 0.5s;
+  overflow: hidden;
+  opacity: 0;
+}
+.main:hover .sub{
+  height: 150px;
+  opacity: 1;
+}
+.sub{
+  background: #eee;
+/*   border: 1px solid #ccc; */
+  height: 150px;
+}
+.sub li:hover{ color: red;}
